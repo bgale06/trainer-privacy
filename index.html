@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trAIner — Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+         max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; color: #1a1a1a; background: #fff; }
+  @media (prefers-color-scheme: dark) { body { color: #e8e8e8; background: #111; } a { color: #ff9f45; } }
+  h1 { font-size: 1.8rem; margin-bottom: 4px; }
+  h2 { font-size: 1.1rem; margin-top: 32px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .eff { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+  a { color: #d2691e; }
+  ul { padding-left: 20px; }
+</style>
+</head>
+<body>
+<h1>trAIner — Privacy Policy</h1>
+<p class="eff">Effective date: June 26, 2026</p>
+
+<p>trAIner (&ldquo;the app,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is a strength-training app. This policy explains what data the app handles, where it goes, and your choices. We do not sell your data, we do not show ads, and we do not track you across other apps or websites.</p>
+
+<h2>What the app stores</h2>
+<ul>
+  <li>Workout data you enter &mdash; exercises, sets, reps, weights, RIR, energy, notes, programs, and coaching history.</li>
+  <li>App settings and preferences.</li>
+</ul>
+
+<h2>Where your data lives</h2>
+<ul>
+  <li>On your device, in the app&rsquo;s local database.</li>
+  <li>In your own iCloud account (via Apple CloudKit), so your data syncs across your devices. This data lives in your private iCloud; we do not have a copy of it and cannot access it. It is governed by Apple&rsquo;s iCloud terms and privacy policy.</li>
+</ul>
+<p>trAIner has no user accounts and no server-side database of your workouts.</p>
+
+<h2>AI coaching</h2>
+<p>When you request AI coaching insights, the app sends the relevant training data (such as recent workout history, prescriptions, and training context) to our coaching service. Requests are routed through our backend proxy to Anthropic&rsquo;s Claude API, which generates the coaching response. This data is sent without any account identifier or name attached, is used only to generate your coaching response, and is not retained by our proxy. Anthropic processes the request under its API terms and does not use API data to train its models. AI coaching is optional &mdash; the app&rsquo;s core suggestions work entirely on-device without it.</p>
+
+<h2>Health data (HealthKit)</h2>
+<p>If you grant permission, trAIner reads and writes workout data to Apple Health to log your training sessions. Health data is handled by Apple HealthKit on your device. We never use Health data for advertising or marketing, and Health data is not sold or shared with third parties.</p>
+
+<h2>Diagnostics (crash reporting)</h2>
+<p>In the released app we use Sentry to collect crash and error reports so we can fix bugs. These reports are scrubbed of personal information before they are sent and are used only to improve app stability. They are not used to identify you or for advertising.</p>
+
+<h2>Third parties</h2>
+<ul>
+  <li>Apple (iCloud, HealthKit) &mdash; your data in your iCloud; per Apple&rsquo;s terms.</li>
+  <li>Anthropic (Claude API) &mdash; processes AI-coaching requests; not used for model training; per Anthropic&rsquo;s terms.</li>
+  <li>Cloudflare &mdash; hosts our stateless proxy that forwards AI requests.</li>
+  <li>Sentry &mdash; crash/error diagnostics (scrubbed of personal information).</li>
+</ul>
+
+<h2>Data retention and deletion</h2>
+<p>Your workout data stays until you delete it. You can delete all on-device app data from within the app (Settings &rarr; Data &amp; Privacy &rarr; Reset all app data), and deleting the app removes its local data from your device. To remove iCloud-synced copies, delete the app&rsquo;s data from your iCloud storage in iOS Settings.</p>
+
+<h2>Children</h2>
+<p>trAIner is not directed at children under 13 and does not knowingly collect data from them.</p>
+
+<h2>Changes</h2>
+<p>We may update this policy; material changes will be reflected by a new effective date here.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy: <a href="mailto:bgale06@gmail.com">bgale06@gmail.com</a></p>
+</body>
+</html>

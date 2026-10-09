@@ -19,7 +19,7 @@
 </head>
 <body>
 <h1>REBL — Privacy Policy</h1>
-<p class="eff">Last updated: October 8, 2026</p>
+<p class="eff">Last updated: October 9, 2026</p>
 <p>REBL ("the app", "we", "us") is a strength-training app developed by Byron Gale. This policy explains what data the app handles, where it goes, and your choices.</p>
 <p>We collect as little as possible. We don't sell your data. We don't run ads. We don't track you across other apps or websites.</p>
 <h2>Data the app stores on your device</h2>
@@ -55,8 +55,8 @@ it's included in your device backups.</p>
 <p>Details you type into REBL yourself, such as your bodyweight, are used by the
 AI coach to personalize your program (see "AI coaching (Anthropic)"). Waist
 measurements you log stay on your device, and in your private iCloud if sync
-is on; the AI coach doesn't receive them. Crash reports are scrubbed and don't
-contain health values.</p>
+is on; the AI coach doesn't receive them. Crash and error reports are scrubbed and
+don't contain health values.</p>
 <p>You can change or revoke access anytime in Settings → Privacy &amp; Security →
 Health → REBL. Note: iOS does not tell apps when access is declined, so REBL
 shows which sources are actively providing data rather than claiming to know
@@ -74,15 +74,15 @@ your permission choices.</p>
 <p>Not sent: anything REBL reads from Apple Health (sleep, heart rate variability, resting heart rate) or calculates from it, and your waist measurements. If that changes, the app will ask you first.</p>
 <p>Our backend forwards each request to Anthropic (<a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>). Anthropic's commercial terms state that it "may not train models on Customer Content from Services"; Anthropic keeps request data for a limited period under its own retention policy. Responses are cached on your device until they're replaced by a newer one or you reset the app.</p>
 <p>We do not store request contents on our backend. Like any server, it sees your device's IP address; it uses it only to rate-limit requests. We keep aggregate daily counters (total requests, total token cost) to enforce a spending cap — these contain no personal data.</p>
-<h2>Crash reporting</h2>
-<p>The App Store release of the app uses Sentry to report crashes so we can fix bugs. Crash reports are scrubbed before they're sent: we strip your user identity, network request contents and headers, breadcrumb data, and the record contents that a database error can otherwise carry (such as the text of a coach note). We never attach screenshots or your chat contents. What remains is technical: error codes, file paths, and the stack trace we need to find the bug. Crash reporting is not used for advertising or tracking, and it is disabled in development builds.</p>
+<h2>Crash and error reporting</h2>
+<p>The App Store release of the app uses Sentry to report crashes, freezes, and errors so we can fix bugs. That includes a few fixed, pre-written messages the app sends when one of its internal checks fails. Reports are scrubbed before they're sent: we strip your user identity, network request contents and headers, breadcrumb data, and the record contents that a database error can otherwise carry (such as the text of a coach note). We never attach screenshots or your chat contents. What remains is technical: your device model and iOS version, screen size, language and time zone settings, error codes, file paths, and the stack trace we need to find the bug. Sentry also counts app sessions to measure how often the app crashes, using a random identifier created on your device that isn't connected to your name, email, or Apple Account. Crash and error reporting is not used for advertising or tracking, and it is disabled in development builds.</p>
 <h2>Subscriptions</h2>
 <p>REBL Pro is an auto-renewable subscription sold through Apple's App Store. Apple processes the payment and manages the subscription — we never see or store your payment details. Purchase and entitlement status is verified on your device via Apple's StoreKit. Manage or cancel anytime in <strong>Settings → your Apple Account → Subscriptions</strong>.</p>
 <h2>What we don't do</h2>
 <ul>
 <li>We don't have user accounts. There's nothing to log in to.</li>
 <li>We don't collect your email, name, location, or contacts.</li>
-<li>We don't use third-party advertising or analytics SDKs (no Firebase, Mixpanel, Amplitude, etc.). The only third-party service is Sentry, for crash reports (above).</li>
+<li>We don't use third-party advertising or analytics SDKs (no Firebase, Mixpanel, Amplitude, etc.). The only third-party service is Sentry, for crash and error reports (above).</li>
 <li>We don't show ads or share data with advertisers.</li>
 <li>We don't sell, rent, or trade your data with anyone.</li>
 </ul>

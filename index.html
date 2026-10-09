@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>trAIner — Privacy Policy</title>
+<title>REBL — Privacy Policy</title>
 <style>
   :root { color-scheme: light dark; }
   body { font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -14,54 +14,93 @@
   .eff { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
   a { color: #d2691e; }
   ul { padding-left: 20px; }
+  code { font: 0.9em ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
 </style>
 </head>
 <body>
-<h1>trAIner — Privacy Policy</h1>
-<p class="eff">Effective date: June 26, 2026</p>
-
-<p>trAIner (&ldquo;the app,&rdquo; &ldquo;we,&rdquo; &ldquo;us&rdquo;) is a strength-training app. This policy explains what data the app handles, where it goes, and your choices. We do not sell your data, we do not show ads, and we do not track you across other apps or websites.</p>
-
-<h2>What the app stores</h2>
+<h1>REBL — Privacy Policy</h1>
+<p class="eff">Last updated: October 8, 2026</p>
+<p>REBL ("the app", "we", "us") is a strength-training app developed by Byron Gale. This policy explains what data the app handles, where it goes, and your choices.</p>
+<p>We collect as little as possible. We don't sell your data. We don't run ads. We don't track you across other apps or websites.</p>
+<h2>Data the app stores on your device</h2>
+<p>The app stores everything you log directly on your iPhone using Apple's SwiftData:</p>
 <ul>
-  <li>Workout data you enter &mdash; exercises, sets, reps, weights, RIR, energy, notes, programs, and coaching history.</li>
-  <li>App settings and preferences.</li>
+<li>Workout sessions, exercises, sets, reps, weights, RIR, and notes</li>
+<li>Energy-level entries</li>
+<li>Body measurements you log (your waist)</li>
+<li>Your training program (days, exercises, target sets)</li>
+<li>Onboarding profile: goal, experience level, schedule preference, body metrics, equipment availability, priority muscle groups, injuries to avoid</li>
+<li>App settings (theme, units, reminders, etc.)</li>
 </ul>
-
-<h2>Where your data lives</h2>
+<p>This data lives on your device. If iCloud is on, it also syncs to your own private iCloud account through Apple's CloudKit, so it's on your other devices — we don't have a copy and can't access it. Your device backups (iCloud Backup or your computer) include it too. Some of it is sent to the AI coach when you use AI features — see "AI coaching (Anthropic)".</p>
+<h2>Apple Health (HealthKit)</h2>
+<p>If you choose to grant access, REBL:</p>
 <ul>
-  <li>On your device, in the app&rsquo;s local database.</li>
-  <li>In your own iCloud account (via Apple CloudKit), so your data syncs across your devices. This data lives in your private iCloud; we do not have a copy of it and cannot access it. It is governed by Apple&rsquo;s iCloud terms and privacy policy.</li>
+<li><strong>Reads</strong> your sleep, heart rate variability (HRV), and resting heart rate to
+  gauge your day-to-day recovery.</li>
+<li><strong>Reads</strong> your heart rate and active calories on Apple Watch during a workout,
+  to show them live on the watch and save them with the workout in Apple Health.</li>
+<li><strong>Writes</strong> your completed strength workouts to Apple Health so they appear in
+  your activity rings and Fitness summary.</li>
 </ul>
-<p>trAIner has no user accounts and no server-side database of your workouts.</p>
-
-<h2>AI coaching</h2>
-<p>When you request AI coaching insights, the app sends the relevant training data (such as recent workout history, prescriptions, and training context) to our coaching service. Requests are routed through our backend proxy to Anthropic&rsquo;s Claude API, which generates the coaching response. This data is sent without any account identifier or name attached, is used only to generate your coaching response, and is not retained by our proxy. Anthropic processes the request under its API terms and does not use API data to train its models. AI coaching is optional &mdash; the app&rsquo;s core suggestions work entirely on-device without it.</p>
-
-<h2>Health data (HealthKit)</h2>
-<p>If you grant permission, trAIner reads and writes workout data to Apple Health to log your training sessions. Health data is handled by Apple HealthKit on your device. We never use Health data for advertising or marketing, and Health data is not sold or shared with third parties.</p>
-
-<h2>Diagnostics (crash reporting)</h2>
-<p>In the released app we use Sentry to collect crash and error reports so we can fix bugs. These reports are scrubbed of personal information before they are sent and are used only to improve app stability. They are not used to identify you or for advertising.</p>
-
-<h2>Third parties</h2>
+<p>Every source is optional and individually controlled. REBL adapts to whatever you
+grant — nothing breaks if you grant none of it.</p>
+<p>REBL analyzes your Apple Health readings on your iPhone to shape the readiness
+score on your Today tab and widget. REBL doesn't upload them or anything
+calculated from them, and none of it reaches the AI coach. If that changes,
+we'll update this policy and ask in the app first.</p>
+<p>To compute the score, REBL keeps a short summary on your iPhone, such as last
+night's sleep against your usual. Like the rest of REBL's data on your iPhone,
+it's included in your device backups.</p>
+<p>Details you type into REBL yourself, such as your bodyweight, are used by the
+AI coach to personalize your program (see "AI coaching (Anthropic)"). Waist
+measurements you log stay on your device, and in your private iCloud if sync
+is on; the AI coach doesn't receive them. Crash reports are scrubbed and don't
+contain health values.</p>
+<p>You can change or revoke access anytime in Settings → Privacy &amp; Security →
+Health → REBL. Note: iOS does not tell apps when access is declined, so REBL
+shows which sources are actively providing data rather than claiming to know
+your permission choices.</p>
+<h2>AI coaching (Anthropic)</h2>
+<p>AI coaching is optional, and REBL asks before it sends anything: during setup, or the first time you open an AI feature. You can turn it off anytime in <strong>Settings → Data &amp; Privacy</strong>. If you choose "Not now", nothing is sent, and workout logging, the offline weight suggestions and all stats keep working.</p>
+<p>While AI coaching is on, the app sends requests through our backend at <code>trainer-proxy.bgale06.workers.dev</code> to Anthropic's Claude API. Some requests start on their own — a weekly insight when you open Today, a recap when you finish a workout, form cues the first time you open an exercise, a new plan when a training block ends — and others start when you ask (the program generator, the chat). A request can contain:</p>
 <ul>
-  <li>Apple (iCloud, HealthKit) &mdash; your data in your iCloud; per Apple&rsquo;s terms.</li>
-  <li>Anthropic (Claude API) &mdash; processes AI-coaching requests; not used for model training; per Anthropic&rsquo;s terms.</li>
-  <li>Cloudflare &mdash; hosts our stateless proxy that forwards AI requests.</li>
-  <li>Sentry &mdash; crash/error diagnostics (scrubbed of personal information).</li>
+<li>Your workouts: dates, exercises, weights, reps, effort (reps in reserve), energy ratings, PRs and trends</li>
+<li>Your profile: age, sex, bodyweight, goal, training style, experience, schedule, priority muscles, equipment and injuries</li>
+<li>Coach notes you write, the messages you send in the chat, and your program and workout-day names</li>
+<li>Your sport context, if you set one: the sport (including a sport you type in yourself), whether you're in season, and which weekdays you play or practise</li>
+<li>Your goal event, if you set one: its name and date, and how many weeks away it is</li>
 </ul>
-
-<h2>Data retention and deletion</h2>
-<p>Your workout data stays until you delete it. You can delete all on-device app data from within the app (Settings &rarr; Data &amp; Privacy &rarr; Reset all app data), and deleting the app removes its local data from your device. To remove iCloud-synced copies, delete the app&rsquo;s data from your iCloud storage in iOS Settings.</p>
-
+<p>Not sent: anything REBL reads from Apple Health (sleep, heart rate variability, resting heart rate) or calculates from it, and your waist measurements. If that changes, the app will ask you first.</p>
+<p>Our backend forwards each request to Anthropic (<a href="https://www.anthropic.com/legal/privacy">Anthropic's privacy policy</a>). Anthropic's commercial terms state that it "may not train models on Customer Content from Services"; Anthropic keeps request data for a limited period under its own retention policy. Responses are cached on your device until they're replaced by a newer one or you reset the app.</p>
+<p>We do not store request contents on our backend. Like any server, it sees your device's IP address; it uses it only to rate-limit requests. We keep aggregate daily counters (total requests, total token cost) to enforce a spending cap — these contain no personal data.</p>
+<h2>Crash reporting</h2>
+<p>The App Store release of the app uses Sentry to report crashes so we can fix bugs. Crash reports are scrubbed before they're sent: we strip your user identity, network request contents and headers, breadcrumb data, and the record contents that a database error can otherwise carry (such as the text of a coach note). We never attach screenshots or your chat contents. What remains is technical: error codes, file paths, and the stack trace we need to find the bug. Crash reporting is not used for advertising or tracking, and it is disabled in development builds.</p>
+<h2>Subscriptions</h2>
+<p>REBL Pro is an auto-renewable subscription sold through Apple's App Store. Apple processes the payment and manages the subscription — we never see or store your payment details. Purchase and entitlement status is verified on your device via Apple's StoreKit. Manage or cancel anytime in <strong>Settings → your Apple Account → Subscriptions</strong>.</p>
+<h2>What we don't do</h2>
+<ul>
+<li>We don't have user accounts. There's nothing to log in to.</li>
+<li>We don't collect your email, name, location, or contacts.</li>
+<li>We don't use third-party advertising or analytics SDKs (no Firebase, Mixpanel, Amplitude, etc.). The only third-party service is Sentry, for crash reports (above).</li>
+<li>We don't show ads or share data with advertisers.</li>
+<li>We don't sell, rent, or trade your data with anyone.</li>
+</ul>
 <h2>Children</h2>
-<p>trAIner is not directed at children under 13 and does not knowingly collect data from them.</p>
-
-<h2>Changes</h2>
-<p>We may update this policy; material changes will be reflected by a new effective date here.</p>
-
+<p>REBL is not directed at children under 13. We do not knowingly collect data from anyone under 13. If you believe a minor has been using the app, contact us and we'll help you delete any associated device data.</p>
+<h2>Deleting your data</h2>
+<p>Because all personal data lives on your device, deleting it is straightforward:</p>
+<ul>
+<li><strong>Delete a specific workout:</strong> open it in the CYCLES tab and use the delete action.</li>
+<li><strong>Delete a waist measurement:</strong> tap WAIST in the LIFTS tab (MY STATS) and swipe the entry away.</li>
+<li><strong>Reset everything (in-app):</strong> Settings → Data &amp; Privacy → Reset all app data. This erases all your logged data from the device (and your iCloud copy, if iCloud sync is on).</li>
+<li><strong>Reset everything (delete the app):</strong> delete the REBL app from your iPhone. iOS removes all local data and the Keychain entry.</li>
+<li><strong>Apple Health data:</strong> open the Health app → Browse → Workouts, and delete REBL-written entries individually.</li>
+</ul>
+<p>If you've used AI coaching, no request contents are retained on our backend (only the aggregate daily counters described above); Anthropic's own retention is described in its privacy policy.</p>
+<h2>Changes to this policy</h2>
+<p>If we change anything material, we'll update the "Last updated" date at the top and, where appropriate, surface a notice in the app.</p>
 <h2>Contact</h2>
-<p>Questions about this policy: <a href="mailto:bgale06@gmail.com">bgale06@gmail.com</a></p>
+<p>Questions about this policy? Email <a href="mailto:bgale06@gmail.com">bgale06@gmail.com</a>.</p>
 </body>
 </html>
